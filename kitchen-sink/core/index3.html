@@ -42,6 +42,11 @@
         color: white;
         font-weight: bold;
       }
+
+
+      #map-canvas {
+        height: 100%;
+      }
   </style>
 </head>
 <body>
@@ -204,9 +209,10 @@
               </div>
             </div>
             <div id="tab-2" class="page-content tab">
-              <div class="block">
-                <p>Map!</p>
-              </div>
+              <!--<div class="block">
+                <p>Map!</p>-->
+                <div id="map-canvas"></div>
+              <!--</div>-->
             </div>
             <div id="tab-3" class="page-content tab">
               <div class="block">
@@ -254,6 +260,33 @@
         },
         splashDurationMs);
     });
+  </script>
+
+  <script type="text/javascript">
+
+    function initMap() {
+      // Init the map.
+      //  var MAP_MIN_ZOOM = 15;
+      //  var MAP_MAX_ZOOM = 20;
+      //  var MAP_MARKER_ZOOM = @currentCity.GoogleMapInitialZoom;
+      var mapOptions = {};
+      // TODO: these lat/long driven by the city domain model
+      //    center: new google.maps.LatLng(@currentCity.CenterLatitude, @currentCity.CenterLongitude),
+      //  zoom: MAP_MIN_ZOOM,
+      //    mapTypeId: google.maps.MapTypeId.ROADMAP // HYBRID
+      //};
+
+      var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    }
+
+    function loadScript() {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCzycRgfnPdoxfXWe04i6fEkprKsosejQQ&sensor=false&callback=initMap&libraries=places";
+      document.body.appendChild(script);
+    }
+
+    window.onload = loadScript;
   </script>
 
 </body>
