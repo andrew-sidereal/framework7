@@ -71,6 +71,13 @@
       font-weight: bold;
       height: 40px;
     }
+
+    #categories {
+      padding: 10px;
+    }
+    .chip.chip-outline {
+      background: white; /* so is filled when on grey background */
+    }
   </style>
 </head>
 <body>
@@ -234,8 +241,32 @@
                     </ul>
                   </div>
 
-                  <!--<div class="block-title">Categories</div>-->
-                  <div class="card card-outline">
+
+                  <div id="categories">
+                    <div class="chip color-red">
+                      <div class="chip-label">Drinks</div>
+                    </div>
+                    <div class="chip color-green">
+                      <div class="chip-label">Food</div>
+                    </div>
+                    <div class="chip color-blue">
+                      <div class="chip-label">Comedy</div>
+                    </div>
+                    <div class="chip color-orange">
+                      <div class="chip-label">Music</div>
+                    </div>
+                    <div class="chip color-pink">
+                      <div class="chip-label">Brunch</div>
+                    </div>
+                    <div class="chip chip-outline color-red">
+                      <div class="chip-label">Trivia</div>
+                    </div>
+                    <div class="chip chip-outline color-green">
+                      <div class="chip-label">Misc</div>
+                    </div>
+                  </div>
+                 
+                  <!--<div class="card card-outline">
                     <div class="card-content card-content-padding">
                       <div class="chip color-red">
                         <div class="chip-label">Drinks</div>
@@ -259,7 +290,7 @@
                         <div class="chip-label">Misc</div>
                       </div>
                     </div>
-                  </div>
+                  </div>-->
 
                   <!--<div class="block-title">Categories</div>
                   <div class="block">
