@@ -5,6 +5,13 @@ var routes = [
     url: './index.html',
     name: 'home',
   },
+
+  // About page
+  {
+    path: '/event123/',
+    url: './pages/event123.html',
+  },
+
   // About page
   {
     path: '/about/',
