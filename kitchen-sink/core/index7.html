@@ -44,40 +44,6 @@
       color: white;
       font-weight: bold;
     }
-
-    .title span {
-      display: block;
-      font-size: 10px;
-    }
-
-
-    #map-canvas {
-      height: 100%;
-    }
-
-    #day-index {
-      display: none; /* too cluttered. hiding for now. */
-      position: fixed; /* otherwise index was scrolling with tab content */
-      width: 26px; /* to fit 3 character indexs, e.g. Mon. Tom. Fri. */
-    }
-    #day-index li {
-      background: white; 
-    }
-    #day-list {
-      margin-top: 0; /* fix issue of gap above list */
-    }
-
-    #day-list .list-group-title {
-      font-weight: bold;
-      height: 40px;
-    }
-
-    #categories {
-      padding: 10px;
-    }
-    .chip.chip-outline {
-      background: white; /* so is filled when on grey background */
-    }
   </style>
 </head>
 <body>
@@ -657,8 +623,14 @@
   <script src="js/app.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script>
-    // A $( document ).ready() block.
+
     $(document).ready(function () {
+      hideSplash();
+
+      stickCategories();      
+    });
+
+    function hideSplash() {
       var splashDurationMs = 500;
       var splashFadeMs = 250;
       setTimeout(
@@ -666,7 +638,30 @@
           $("#splash").fadeOut(splashFadeMs, function (me) { me.remove() });
         },
         splashDurationMs);
-    });
+    }
+
+    function stickCategories() {
+      // make them fixed... put top equal to their current top... add padding above list...
+
+      // measure nav height
+      var $nav = $(".navbar-current");
+      var navHeight = $nav.height();
+
+      // set categories top to be right below the nav
+      var $categories = $("#categories");
+      $categories.css("top", navHeight);
+      $categories.css("position", "fixed");
+      var catHeight = $categories.outerHeight();
+
+      // reserve some padding at the top, above the days
+      var $dayList = $("#day-list");
+      $dayList.css("margin-top", catHeight);
+
+      // set background color
+      var $currentPage = $(".page-current");
+      var bgColor = $currentPage.css("background-color");
+      $categories.css("background-color", bgColor);
+    }
   </script>
 
   <script type="text/javascript">
