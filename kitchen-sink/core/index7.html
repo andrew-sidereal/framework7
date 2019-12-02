@@ -598,15 +598,17 @@
             <div class="toolbar toolbar-bottom tabbar tabbar-labels">
               <div class="toolbar-inner">
                 <a href="#tab-1" class="tab-link tab-link-active">
-                  <i class="icon f7-icons">square_favorites</i>
-                  <span class="tabbar-label">List</span>
+                  <i class="icon f7-icons">bolt_fill</i>
+                  <span class="tabbar-label">Events</span>
                 </a>
                 <a href="#tab-2" class="tab-link">
-                  <i class="icon f7-icons">map</i>
-                  <span class="tabbar-label">Map</span>
+                  <!--<i class="icon f7-icons">map</i>
+                      <span class="tabbar-label">Map</span>-->
+                  <i class="icon f7-icons">map_pin_ellipse</i>
+                  <span class="tabbar-label">Venues</span>
                 </a>
                 <a href="#tab-3" class="tab-link">
-                  <i class="icon f7-icons">photo</i>
+                  <i class="icon f7-icons">logo_instagram</i>
                   <span class="tabbar-label">Pics</span>
                 </a>
                 <span class="tab-link-highlight" style="width: 33.3333%; transform: translate3d(0%, 0px, 0px);"></span>
@@ -654,8 +656,9 @@
       var catHeight = $categories.outerHeight();
 
       // reserve some padding at the top, above the days
-      var $dayList = $("#day-list");
-      $dayList.css("margin-top", catHeight);
+      var $tab1 = $("#tab-1");
+      //var tabPadTop = $tab1.css("padding-top");
+      $tab1.css("padding-top", "+="+catHeight+"px");
 
       // set background color
       var $currentPage = $(".page-current");
