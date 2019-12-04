@@ -693,9 +693,9 @@ code {
   width: 26px; /* to fit 3 character indexs, e.g. Mon. Tom. Fri. */
 }
 
-  #day-index li {
-    background: white;
-  }
+#day-index li {
+  background: white;
+}
 
 #day-list {
   margin-top: 0; /* fix issue of gap above list */
@@ -711,10 +711,16 @@ code {
   height: 65px;
 }
 
-#categories {
+.tab-sticky-header {
   padding: 10px;
   z-index: 999;
   width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tab-sticky-header .segmented {
+  margin-bottom: 0;
 }
 
 .chip.chip-outline {
