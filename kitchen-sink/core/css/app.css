@@ -715,3 +715,19 @@ code {
 .chip.chip-outline {
   background: white; /* so is filled when on grey background */
 }
+
+
+/*#tab-2 .row .col-50:first-child .card {
+  margin-right: 0;
+}
+#tab-2 .row .col-50:last-child .card {
+  margin-left: 0;
+}*/
+
+#tab-2 .row .col-50:nth-child(odd) .card {
+  margin-right: 0;
+}
+
+#tab-2 .row .col-50:nth-child(even) .card {
+  margin-left: 0;
+}
