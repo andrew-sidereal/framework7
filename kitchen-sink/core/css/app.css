@@ -709,6 +709,7 @@ code {
 #categories {
   padding: 10px;
   z-index: 999;
+  width: 100%;
 }
 
 .chip.chip-outline {

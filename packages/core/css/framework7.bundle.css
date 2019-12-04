@@ -4668,6 +4668,7 @@ html.device-full-viewport body {
 .links-list li:last-child a:after {
   display: none !important;
 }
+.hairline-after, /* this line is custom */
 .simple-list li:after,
 .links-list a:after,
 .list .item-inner:after {
