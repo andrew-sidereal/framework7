@@ -740,12 +740,12 @@
 
         // show new tab content
         var tabId = $tabButton.attr("tabId");
-        var $tabPane = $tabPanes.find("[tabId=" + tabId + "]");
+        var $tabPane = $tabPanes.filter("#" + tabId);
         $tabPane.addClass(activePaneCssClass);
       }
 
       // select the first tab by default
-      onTabClick($tabButtons)
+      onTabClick($tabButtons.first());
     }
 
     function hideSplash() {

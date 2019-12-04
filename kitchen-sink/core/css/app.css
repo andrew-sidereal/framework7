@@ -728,12 +728,7 @@ code {
 }
 
 
-/*#tab-2 .row .col-50:first-child .card {
-  margin-right: 0;
-}
-#tab-2 .row .col-50:last-child .card {
-  margin-left: 0;
-}*/
+/* LOCATIONS - TILES */
 
 #tab-2 .row .col-50:nth-child(odd) .card {
   margin-right: 0;
@@ -741,4 +736,10 @@ code {
 
 #tab-2 .row .col-50:nth-child(even) .card {
   margin-left: 0;
+}
+
+/* LOCATIONS - TABS */
+
+.loc-tab:not(.pane-active) {
+  display: none;
 }
