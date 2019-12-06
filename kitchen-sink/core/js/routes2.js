@@ -2,15 +2,31 @@ var routes = [
   // Index page
   {
     path: '/',
-    url: './index.html',
+    url: './index7.html',
     name: 'home',
   },
 
-  // About page
+  // Event page
   {
     path: '/event123/',
     url: './pages/event123.html',
   },
+
+  // Location page
+  {
+    path: '/location123/',
+    url: './pages/location123.html',
+  },
+
+
+
+
+
+
+
+
+
+
 
   // About page
   {
