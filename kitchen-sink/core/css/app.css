@@ -677,6 +677,11 @@ code {
 
 /* ================== CUSTOM CSS ================== */
 
+.card .card-footer a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .title span {
   display: block;
   font-size: 10px;
