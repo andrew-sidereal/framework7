@@ -749,9 +749,9 @@ code {
   display: none;
 }
 
-.card-header {
+/*.card-header {
   height: 25vw !important;
-}
+}*/
 .card-header span {
   background-color: rgba(0, 0, 0, 0.75);
   padding: 2px 7px;
