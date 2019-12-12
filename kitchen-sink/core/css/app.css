@@ -748,3 +748,16 @@ code {
 .loc-tab:not(.pane-active) {
   display: none;
 }
+
+.card-header {
+  height: 25vw !important;
+}
+.card-header span {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 2px 7px;
+}
+
+
+.event-detail .media-list {
+  margin-top: 0;
+}
