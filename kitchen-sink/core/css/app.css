@@ -787,7 +787,21 @@ code {
   padding: 2px 7px;
 }
 
+.media-list .item-link .item-title-row:before, li.media-item .item-link .item-title-row:before {
+  color: rgb(0,122,255);
+}
 
-.event-detail .media-list {
+
+/*.locations-list .item-link .item-title-row:before {
+  top: 30px !important;
+}*/
+
+.detail-info-panel
+{
   margin-top: 0;
+  margin-bottom: 0;
+}
+
+.detail-info-panel .item-inner {
+  font-size: 15px;
 }
