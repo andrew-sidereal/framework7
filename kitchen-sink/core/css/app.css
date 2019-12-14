@@ -716,6 +716,27 @@ code {
   height: 65px;
 }
 
+#day-list .categories {
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  left: 0;
+  top: 0;
+}
+
+#day-list .categories div {
+  height: 100%;
+  width: 4px;
+  float: left;
+}
+
+#day-list .item-title-row:before {
+  right: 0 !important;
+  top: auto !important;
+  bottom: -18px !important;
+}
+
+
 .tab-sticky-header {
   padding: 10px;
   z-index: 999;
@@ -728,7 +749,16 @@ code {
   margin-bottom: 0;
 }
 
-.chip.chip-outline {
+.tab-sticky-header#categories {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.tab-sticky-header#categories .chip {
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.tab-sticky-header#categories .chip.chip-outline {
   background: white; /* so is filled when on grey background */
 }
 
