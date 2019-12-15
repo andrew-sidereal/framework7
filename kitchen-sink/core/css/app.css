@@ -805,3 +805,13 @@ code {
 .detail-info-panel .item-inner {
   font-size: 15px;
 }
+
+.detail-info-panel .row > div:nth-child(1),
+.detail-info-panel .row > div:nth-child(2) {
+  /* this helps center the text vertically...*/
+  padding-top: 4px;
+}
+
+.label {
+  font-weight: bold;
+}
