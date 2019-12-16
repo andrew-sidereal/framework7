@@ -815,3 +815,22 @@ code {
 .label {
   font-weight: bold;
 }
+
+/* desktop adjustments */
+.device-desktop .tab {
+  width: 33% !important;
+  padding-top: 64px !important; /* for some reason on desktop there's various excess top padding... */
+}
+.device-desktop .tabs {
+  margin-top: 56px !important; /* add just enough room to the top for the tab handles to move to the top */
+}
+.device-desktop .toolbar-bottom {
+  top: 64px !important; /* move the tab titles to the top */
+  pointer-events: none; /* cancel all clicking */
+}
+.device-desktop .tab-sticky-header {
+  width: 32% !important;
+}
+.device-desktop .toolbar-bottom:before {
+  display: none;
+}
