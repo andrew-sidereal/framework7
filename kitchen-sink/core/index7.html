@@ -772,7 +772,7 @@
     function initTabStickyHeaders() {
       
       // measure nav height
-      var $nav = $(".navbar-current");
+      var $nav = $(".navbar");
       var navHeight = $nav.height();
 
       // get background color
@@ -783,19 +783,35 @@
       $stickyHeaders.each(function (index) {
 
         // get tab elements
-        var $tabHeader = $(this);
-        var $tab = $tabHeader.closest(".tab");
+        var $tabStickyHeader = $(this);
+        var $tab = $tabStickyHeader.closest(".tab");
+        var tabWidth = $tab.width();
+        
+        var stickyTop = navHeight;
+        var isDesktop = $("html").hasClass("device-desktop");
+        if (isDesktop === true) {
+          // add additional top amount due to tab headers
+          var $toolbar = $(".toolbar-bottom");
+          var toolbarHeight = $toolbar.height();
+          stickyTop += toolbarHeight;
+        }
 
         // set categories top to be right below the nav
-        $tabHeader.css("top", navHeight);
-        $tabHeader.css("position", "fixed");
-        var tabHeaderHeight = $tabHeader.outerHeight();
+        $tabStickyHeader.css("top", stickyTop + "px");
+        $tabStickyHeader.css("position", "fixed");
+       
+        var horzStickyHeaderPadding = $tabStickyHeader.innerWidth() - $tabStickyHeader.width();
 
-        // reserve some padding at the top, above the days
+        // set width, substract padding
+        $tabStickyHeader.css("width", tabWidth - horzStickyHeaderPadding);
+
+        var tabHeaderHeight = $tabStickyHeader.outerHeight();
+
+        // reserve some padding at the top of the tab, so the content is pushed down
         $tab.css("padding-top", "+=" + tabHeaderHeight + "px");
 
         // set background color
-        $tabHeader.css("background-color", bgColor);
+        $tabStickyHeader.css("background-color", bgColor);
         //$categories.css("backdrop-filter", bgFilter);
       });
 

@@ -738,7 +738,7 @@ code {
 
 
 .tab-sticky-header {
-  padding: 10px;
+  padding: 8px;
   z-index: 999;
   width: 100%;
   margin-top: 0;
@@ -755,8 +755,8 @@ code {
 }
 .tab-sticky-header#categories .chip {
   border-radius: 5px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 .tab-sticky-header#categories .chip.chip-outline {
   background: white; /* so is filled when on grey background */
@@ -819,7 +819,7 @@ code {
 /* desktop adjustments */
 .device-desktop .tab {
   width: 33% !important;
-  padding-top: 64px !important; /* for some reason on desktop there's various excess top padding... */
+  /*padding-top: 64px !important; /* for some reason on desktop there's various excess top padding... */
 }
 .device-desktop .tabs {
   margin-top: 56px !important; /* add just enough room to the top for the tab handles to move to the top */
@@ -828,9 +828,18 @@ code {
   top: 64px !important; /* move the tab titles to the top */
   pointer-events: none; /* cancel all clicking */
 }
-.device-desktop .tab-sticky-header {
+/*.device-desktop .tab-sticky-header {
   width: 32% !important;
-}
+}*/
 .device-desktop .toolbar-bottom:before {
-  display: none;
+  display: none; 
+}
+
+.device-desktop #app {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.device-desktop body {
+  background: radial-gradient(black, transparent)
 }
