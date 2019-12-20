@@ -770,7 +770,14 @@
     }
 
     function initTabStickyHeaders() {
-      
+
+      var isDesktop = $("html").hasClass("device-desktop");
+
+      if (isDesktop) {
+        // add the "active" class to all tabs they're all active.
+        $(".toolbar-bottom .tab-link").addClass("tab-link-active");
+      }
+
       // measure nav height
       var $nav = $(".navbar");
       var navHeight = $nav.height();
@@ -788,12 +795,15 @@
         var tabWidth = $tab.width();
         
         var stickyTop = navHeight;
-        var isDesktop = $("html").hasClass("device-desktop");
+
         if (isDesktop === true) {
           // add additional top amount due to tab headers
           var $toolbar = $(".toolbar-bottom");
           var toolbarHeight = $toolbar.height();
           stickyTop += toolbarHeight;
+
+          // add the "active" class to all tabs they're all active.
+          $(".toolbar - bottom .tab-link").addClass("tab-link-active");
         }
 
         // set categories top to be right below the nav

@@ -834,6 +834,15 @@ code {
 .device-desktop .toolbar-bottom:before {
   display: none; 
 }
+.device-desktop .toolbar-bottom .tab-link i, 
+.device-desktop .toolbar-bottom .tab-link-highlight 
+{
+  display: none;
+}
+.device-desktop .toolbar-bottom .tab-link span {
+  font-size: 24px;
+  line-height: 1.75;
+}
 
 .device-desktop #app {
   max-width: 1200px;
